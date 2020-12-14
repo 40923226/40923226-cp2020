@@ -1,4 +1,4 @@
-<h1>First首頁</h1>
+<h1>首頁</h1>
 <p></p>
 <p></p>
 <h1>HW1</h1>
@@ -112,8 +112,8 @@
 <span class="image"><img class="popimg" id="_i_10" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH09/webcontent/PCH09/image20.png"/></span>
 <p id="N10729" lang="">Diagram of multiple classifications of network topologies. Public domain image obtained from<span> </span><a href="https://commons.wikimedia.org/wiki/File:NetworkTopologies.png" id="_i_11" lang="" target="_blank">Maksim</a>.</p>
 <h1>HW2</h1>
-<p>Hi我是大帥哥</p>
-<h1>HW3</h1>
+<p></p>
+<h1>HW3</h1><h2>Exercise 9 Guessing game one</h2>
 <ul>
 <li>
 <h5>Keep the game going until the user types “exit”繼續遊戲，直到用戶鍵入“退出”</h5>
@@ -122,6 +122,8 @@
 <h5>Keep track of how many guesses the user has taken, and when the game ends, print this out.跟踪用戶進行了多少猜測，當遊戲結束時，將其打印出來。</h5>
 </li>
 </ul>
+<p><br/>Discussion<strong><span>討論區</span></strong></p>
+<pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">Random Numbers (and Modules)隨機數（和模塊）</span></pre>
 <ul>
 <li>
 <h5>Modules模組</h5>
@@ -131,39 +133,30 @@
 </li>
 <li>
 <h5>User input用戶輸入</h5>
+<h5></h5>
 </li>
-</ul><ul>
-<li>
-<h5>Keep the game going until the user types “exit”繼續遊戲，直到用戶鍵入“退出”</h5>
-</li>
-<li>
-<h5>Keep track of how many guesses the user has taken, and when the game ends, print this out.跟踪用戶進行了多少猜測，當遊戲結束時，將其打印出來。</h5>
-Discussion討論區</li>
-</ul><h2>Exercise 9 Guessing game one猜一個遊戲</h2><ul> <li> <h5>Keep the game going until the user types “exit”繼續遊戲，直到用戶鍵入“退出”</h5> </li> <li> <h5>Keep track of how many guesses the user has taken, and when the game ends, print this out.跟踪用戶進行了多少猜測，當遊戲結束時，將其打印出來。</h5> <h3>Discussion討論區</h3><ul> <li> <h5>Modules模組</h5> </li> <li> <h5>Random numbers隨機數</h5> </li> <li> <h5>User input用戶輸入</h5> </li> </ul><h3>Random Numbers(and Modules)隨機數(和模塊)</h3>
-<h5>This is your first exposure to using Python code that somebody else wrote. In Python, these formally-distributed code packages are called<span> </span><em>modules</em>. The thing we want from a module in this exercise is the ability to generate random numbers. This comes from the<span> </span><em>random</em><span> </span>module.</h5>
-<h5>To use a module, at the top of your file, type:</h5>
-<h5><span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="kn"><span style="color: #000000;"><span face="Verdana, Arial, Helvetica, sans-serif" style="font-family: Verdana, Arial, Helvetica, sans-serif;">[</span></span>import</span> <span class="nn">random<span style="color: #000000;">]</span></span></code></span></h5>
-<h5><span lang="zh-TW">這是您第一次使用別人編寫的Python代碼。在Python中，這些正式分發的代碼包稱為模塊。在本練習中，我們希望從模塊獲得的是生成隨機數的能力。這來自隨機模塊。 要使用模塊，請在文件頂部鍵入[<span><span style="color: #ff0000;">隨機導入</span>]</span></span></h5>
-<h5>This means you are allowing your Python program to use a module called<span> </span><code class="highlighter-rouge">random</code><span> </span>in the rest of your code.</h5>
-<h5>To use it (and generate a random integer), now type:[<span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span></code></span><strong><code class="language-python" data-lang="python"><span class="p">]</span></code></strong></h5>
-<h5><span>這意味著您將允許Python程序在其餘代碼中使用一個名為random的模塊。 要使用它（並生成一個隨機整數），現在鍵入：[</span><span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span></code></span><code class="language-python" data-lang="python"><span class="p">]</span></code></h5>
-<h5><code class="language-python" data-lang="python"><span class="p"><span>Once you run this program, the variable </span><code class="highlighter-rouge">a</code><span><span> </span>will have a random integer that the computer made for you, between 2 and 6 (including 2 and 6). The specific documentation for this method is<span> here.</span></span></span></code></h5>
-<h5><code class="language-python" data-lang="python"><span class="p"><span>一旦運行此程序，變量a將具有計算機為您製作的2到6（包括2到6）之間的隨機整數。此方法的特定文檔在這裡。</span></span></code></h5>
-<h5>There are many ways you can generate random numbers - integers, decimals, and much more. The Python documentation has much more detailed information about what is possible from the random module.</h5>
-<h5><span lang="zh-TW">您可以通過多種方式生成隨機數-整數，小數等。 Python文檔提供了有關隨機模塊可能實現的功能的詳細信息。</span></h5>
-<h3>User input用戶輸入</h3>
-<h5>We covered all you need to know in the first exercise of this blog!</h5>
-<h5 class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">我們在本博客的第一個練習中介紹了您需要了解的所有信息！</span></h5>
-<p></p>
-<h2>Exercise 12 List Ends 列表結尾</h2>
-<p>編寫一個程序，該程序接受一個數字列表（例如，a = [5、10、15、20、25]），並僅給出給定列表的第一個和最後一個元素組成一個新列表。為了練習，請在函數內編寫此代碼。</p>
-<ul>
-<li>Lists and properties of lists<span>列表和列表屬性</span></li>
-<li>List comprehensions <span>列表理解</span></li>
-<li>Functions功能<br/><br/></li>
 </ul>
+<h5>Random Numbers (and Modules)隨機數（和模塊）</h5><h2>Exercise 12 List Ends</h2>
+<p><span>Write a program that takes a list of numbers (for example, </span><code class="highlighter-rouge">a = [5, 10, 15, 20, 25]</code><span>) and makes a new list of only the first and last elements of the given list. For practice, write this code inside a function.</span></p>
+<p><span lang="zh-TW">編寫一個程序，該程序接受一個數字列表（例如，a = [5、10、15、20、25]），並僅給出給定列表的第一個和最後一個元素組成一個新列表。為了練習，請在函數內編寫此代碼。</span></p>
+<p><span lang="zh-TW"></span></p>
+<p><span lang="zh-TW">Concepts to practice</span><span lang="zh-TW">練習概念</span></p>
 <ul>
-<li>Lists and properties of lists<span>列表和列表屬性</span></li>
-<li>List comprehensions <span>列表理解</span></li>
-<li>Functions功能</li>
-</ul><h3>Concepts to practice練習概念</h3><ul> <li>Lists and properties of lists<span>列表和列表屬性</span></li> <li>List comprehensions <span>列表理解</span></li> <li>Functions功能</li> </ul><h2>Exercise 13 Fibonacci費布那西</h2><p><span>Write a program that asks the user how many Fibonnaci numbers to generate and then generates them. Take this opportunity to think about how you can use functions. Make sure to ask the user to enter the number of numbers in the sequence to generate.(</span><em>Hint: The Fibonnaci seqence is a sequence of numbers where the next number in the sequence is the sum of the previous two numbers in the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …</em><span>)</span></p><p><span lang="zh-TW">編寫一個程序，詢問用戶要生成多少斐波那契數字，然後生成它們。藉此機會考慮如何使用功能。確保要求用戶輸入要生成的序列中的數字。（提示：Fibonnaci序列是一個數字序列，其中序列中的下一個數字是序列中前兩個數字的和。該序列看起來像這樣：1，1，2，3，5，8，13，…）</span></p><p><span lang="zh-TW">編寫一個程序，詢問用戶要生成多少費布那西數字，然後生成它們。藉此機會考慮如何使用功能。確保要求用戶輸入要生成的序列中的數字。（提示：Fibonnaci序列是一個數字序列，其中序列中的下一個數字是序列中前兩個數字的和。該序列看起來像這樣：1，1，2，3，5，8，13，…）</span></p><pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"></pre></li></ul></div></div></div>
+<li>
+<h5>Lists and properties of lists<span>列表和列表屬性</span></h5>
+</li>
+<li>
+<h5>List comprehensions <span>列表理解</span></h5>
+</li>
+<li>
+<h5>Functions功能</h5>
+</li>
+</ul>
+<h2>Exercise 13 Fibonacci</h2>
+<h5><span>Write a program that asks the user how many Fibonnaci numbers to generate and then generates them. Take this opportunity to think about how you can use functions. Make sure to ask the user to enter the number of numbers in the sequence to generate.(</span><em>Hint: The Fibonnaci seqence is a sequence of numbers where the next number in the sequence is the sum of the previous two numbers in the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …</em><span>)</span></h5>
+<h5><span lang="zh-TW">編寫一個程序，詢問用戶要生成多少斐波那契數字，然後生成它們。藉此機會考慮如何使用功能。確保要求用戶輸入要生成的序列中的數字。（提示：Fibonnaci序列是一個數字序列，其中序列中的下一個數字是序列中前兩個數字的和。該序列看起來像這樣：1，1，2，3，5，8，13，…）</span></h5>
+<h5><span lang="zh-TW"></span></h5>
+<h5><span lang="zh-TW"></span></h5>
+</div>
+</div>
+</div>
