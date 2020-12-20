@@ -113,7 +113,14 @@
 <p id="N10729" lang="">Diagram of multiple classifications of network topologies. Public domain image obtained from<span> </span><a href="https://commons.wikimedia.org/wiki/File:NetworkTopologies.png" id="_i_11" lang="" target="_blank">Maksim</a>.</p>
 <h1>HW2</h1>
 <p></p>
-<h1>HW3</h1><h2>Exercise 9 Guessing game one</h2>
+<h1>HW3</h1><ul>
+<li>
+<h5>Keep the game going until the user types “exit”繼續遊戲，直到用戶鍵入“退出”</h5>
+</li>
+<li>
+<h5>Keep track of how many guesses the user has taken, and when the game ends, print this out.跟踪用戶進行了多少猜測，當遊戲結束時，將其打印出來。</h5>
+</li>
+</ul><h2>Exercise 9 Guessing game one</h2>
 <ul>
 <li>
 <h5>Keep the game going until the user types “exit”繼續遊戲，直到用戶鍵入“退出”</h5>
@@ -122,8 +129,8 @@
 <h5>Keep track of how many guesses the user has taken, and when the game ends, print this out.跟踪用戶進行了多少猜測，當遊戲結束時，將其打印出來。</h5>
 </li>
 </ul>
-<p><br/>Discussion<strong><span>討論區</span></strong></p>
-<pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">Random Numbers (and Modules)隨機數（和模塊）</span></pre>
+<h3>Discussion討論</h3>
+<p><br/><span lang="zh-TW">Random Numbers (and Modules)隨機數（和模塊）</span></p>
 <ul>
 <li>
 <h5>Modules模組</h5>
@@ -136,10 +143,98 @@
 <h5></h5>
 </li>
 </ul>
-<h5>Random Numbers (and Modules)隨機數（和模塊）</h5>
 <p>This is your first exposure to using Python code that somebody else wrote. In Python, these formally-distributed code packages are called<span> </span><em>modules</em>. The thing we want from a module in this exercise is the ability to generate random numbers. This comes from the<span> </span><em>random</em><span> </span>module.</p>
 <p>To use a module, at the top of your file, type</p>
-<p><span lang="zh-TW">這是您第一次使用別人編寫的Python代碼。在Python中，這些正式分發的代碼包稱為模塊。在本練習中，我們希望從模塊獲得的是生成隨機數的能力。這來自隨機模塊。 要使用模塊，請在文件頂部鍵入</span></p><h2>Exercise 12 List Ends</h2>
+<p><span lang="zh-TW">這是您第一次使用別人編寫的Python代碼。在Python中，這些正式分發的代碼包稱為模塊。在本練習中，我們希望從模塊獲得的是生成隨機數的能力。這來自隨機模塊。 要使用模塊，請在文件頂部鍵入</span></p>
+<pre><span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="kn">[import</span> <span class="nn">random]<br/><span style="color: #000000;">This means you are allowing your Python program to use a module called <code class="highlighter-rouge">random</code> in the <br/>rest of your code.<br/></span><span style="color: #000000;">这意味着您允许 Python 程序在代码的其余部分使用称为随机的模块。<br/><br/>To use it (and generate a random integer), now type:<br/>要使用它（並生成随機整数），請键入：<br/></span></span></code></span></pre>
+<pre><span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="n">[a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]<br/></span></code></span></pre>
+<pre><span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="nn"><span style="color: #000000;">Once you run this program, the variable a will have a random integer that the computer <br/>made for you, between 2 and 6 (including 2 and 6). The specific documentation for this <br/>method is here.<br/>運行此程序后，變量 a 将有一个随機整数，計算機為您制作的 2 和 6（包括 2 和 6）。此方法的特定文<br/>檔位於此處。<br/>There are many ways you can generate random numbers - integers, decimals, and much <br/>more. The Python documentation has much more detailed information about what is <br/>possiblefrom the random module.<br/>有許多方法可以生成随機數 - 整數、小數等。Python 文档包含有關随機模塊中可能實現哪些内容的詳细信<br/>息。<br/><br/></span><br/></span></code></span></pre><h3>solution解決方法</h3>
+<p><span>Great example of a solution including both extras!</span>解决方案的一个很好的例子， 包括两个额外！</p>
+<p></p>
+<p>Ex:</p>
+<pre>import random
+
+number = random.randint(1,9)
+guess = 0
+count = 0
+
+
+while guess != number and guess != "exit":
+    guess = input("What's your guess?")
+    
+    if guess == "exit":
+        break
+    
+    guess = int(guess)
+    count += 1
+    
+    if guess &lt; number:
+        print("Too low!")
+    elif guess &gt; number:
+        print("Too high!")
+    else:
+        print("You got it!")
+        print("And it only took you",count,"tries!")<br/><span><br/>And another另一個:<br/></span></pre>
+<pre>import random
+
+rd = random.randint(1,9)
+guess = 0
+c = 0
+while guess != rd and guess != "exit":
+    guess = input("Enter a guess between 1 to 9")
+
+    if guess == "exit":
+        break
+
+    guess = int(guess)
+    c += 1
+
+    if guess &lt; rd:
+        print("Too low")
+    elif guess &gt; rd:
+        print("Too high")
+    else:
+        print("Right!")
+        print("You took only", c, "tries!")
+input()</pre>
+<pre><span> </span></pre>
+<pre><br/>or或者<br/><br/></pre>
+<pre>import random
+
+# Awroken
+
+MINIMUM = 1
+MAXIMUM = 9
+NUMBER = random.randint(MINIMUM, MAXIMUM)
+GUESS = None
+ANOTHER = None
+TRY = 0
+RUNNING = True
+
+print "Alright..."
+
+while RUNNING:
+    GUESS = raw_input("What is your lucky number? ")
+    if int(GUESS) &lt; NUMBER:
+        print "Wrong, too low."
+    elif int(GUESS) &gt; NUMBER:
+        print "Wrong, too high."
+    elif GUESS.lower() == "exit":
+        print "Better luck next time."
+    elif int(GUESS) == NUMBER:
+        print "Yes, that's the one, %s." % str(NUMBER)
+        if TRY &lt; 2:
+            print "Impressive, only %s tries." % str(TRY)
+        elif TRY &gt; 2 and TRY &lt; 10:
+            print "Pretty good, %s tries." % str(TRY)
+        else:
+            print "Bad, %s tries." % str(TRY)
+        RUNNING = False
+    TRY += 1</pre>
+<h5 id="happy-coding">Happy coding!編碼愉快</h5>
+<pre><br/><br/><br/></pre>
+<pre><br/><br/></pre>
+<pre><span></span></pre><h2>Exercise 12 List Ends</h2>
 <p><span>Write a program that takes a list of numbers (for example, </span><code class="highlighter-rouge">a = [5, 10, 15, 20, 25]</code><span>) and makes a new list of only the first and last elements of the given list. For practice, write this code inside a function.</span></p>
 <p><span lang="zh-TW">編寫一個程序，該程序接受一個數字列表（例如，a = [5、10、15、20、25]），並僅給出給定列表的第一個和最後一個元素組成一個新列表。為了練習，請在函數內編寫此代碼。</span></p>
 <p><span lang="zh-TW"></span></p>
@@ -160,6 +255,4 @@
 <h5><span lang="zh-TW">編寫一個程序，詢問用戶要生成多少斐波那契數字，然後生成它們。藉此機會考慮如何使用功能。確保要求用戶輸入要生成的序列中的數字。（提示：Fibonnaci序列是一個數字序列，其中序列中的下一個數字是序列中前兩個數字的和。該序列看起來像這樣：1，1，2，3，5，8，13，…）</span></h5>
 <h5><span lang="zh-TW"></span></h5>
 <h5><span lang="zh-TW"></span></h5>
-</div>
-</div>
-</div>
+</div></div></div>

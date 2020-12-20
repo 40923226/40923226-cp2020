@@ -133,14 +133,93 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW2 << <a href='HW2.html'>Previous</a> <a href='Exercise 9 Guessing game one.html'>Next</a> >> Exercise 9 Guessing game one<br /><h1>HW3</h1><ul>
-<li>
-<h5>Keep the game going until the user types “exit”繼續遊戲，直到用戶鍵入“退出”</h5>
-</li>
-<li>
-<h5>Keep track of how many guesses the user has taken, and when the game ends, print this out.跟踪用戶進行了多少猜測，當遊戲結束時，將其打印出來。</h5>
-</li>
-</ul><br />HW2 << <a href='HW2.html'>Previous</a> <a href='Exercise 9 Guessing game one.html'>Next</a> >> Exercise 9 Guessing game one</div>
+    <div id="tipue_search_content">Discussion討論 << <a href='Discussion討論.html'>Previous</a> <a href='Exercise 12 List Ends.html'>Next</a> >> Exercise 12 List Ends<br /><h1>solution解決方法</h1>
+<p><span>Great example of a solution including both extras!</span>解决方案的一个很好的例子， 包括两个额外！</p>
+<p></p>
+<p>Ex:</p>
+<pre>import random
+
+number = random.randint(1,9)
+guess = 0
+count = 0
+
+
+while guess != number and guess != "exit":
+    guess = input("What's your guess?")
+    
+    if guess == "exit":
+        break
+    
+    guess = int(guess)
+    count += 1
+    
+    if guess &lt; number:
+        print("Too low!")
+    elif guess &gt; number:
+        print("Too high!")
+    else:
+        print("You got it!")
+        print("And it only took you",count,"tries!")<br/><span><br/>And another另一個:<br/></span></pre>
+<pre>import random
+
+rd = random.randint(1,9)
+guess = 0
+c = 0
+while guess != rd and guess != "exit":
+    guess = input("Enter a guess between 1 to 9")
+
+    if guess == "exit":
+        break
+
+    guess = int(guess)
+    c += 1
+
+    if guess &lt; rd:
+        print("Too low")
+    elif guess &gt; rd:
+        print("Too high")
+    else:
+        print("Right!")
+        print("You took only", c, "tries!")
+input()</pre>
+<pre><span> </span></pre>
+<pre><br/>or或者<br/><br/></pre>
+<pre>import random
+
+# Awroken
+
+MINIMUM = 1
+MAXIMUM = 9
+NUMBER = random.randint(MINIMUM, MAXIMUM)
+GUESS = None
+ANOTHER = None
+TRY = 0
+RUNNING = True
+
+print "Alright..."
+
+while RUNNING:
+    GUESS = raw_input("What is your lucky number? ")
+    if int(GUESS) &lt; NUMBER:
+        print "Wrong, too low."
+    elif int(GUESS) &gt; NUMBER:
+        print "Wrong, too high."
+    elif GUESS.lower() == "exit":
+        print "Better luck next time."
+    elif int(GUESS) == NUMBER:
+        print "Yes, that's the one, %s." % str(NUMBER)
+        if TRY &lt; 2:
+            print "Impressive, only %s tries." % str(TRY)
+        elif TRY &gt; 2 and TRY &lt; 10:
+            print "Pretty good, %s tries." % str(TRY)
+        else:
+            print "Bad, %s tries." % str(TRY)
+        RUNNING = False
+    TRY += 1</pre>
+<h5 id="happy-coding">Happy coding!編碼愉快</h5>
+<pre><br/><br/><br/></pre>
+<pre><br/><br/></pre>
+<pre><span></span></pre><br />Discussion討論 << <a href='Discussion討論.html'>Previous</a> <a href='Exercise 12 List Ends.html'>Next</a> >> Exercise 12 List Ends</div>
         
     <!-- footer -->
       <div class="container">

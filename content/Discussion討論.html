@@ -133,14 +133,26 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW2 << <a href='HW2.html'>Previous</a> <a href='Exercise 9 Guessing game one.html'>Next</a> >> Exercise 9 Guessing game one<br /><h1>HW3</h1><ul>
+    <div id="tipue_search_content">Exercise 9 Guessing game one << <a href='Exercise 9 Guessing game one.html'>Previous</a> <a href='solution解決方法.html'>Next</a> >> solution解決方法<br /><h1>Discussion討論</h1>
+<p><br/><span lang="zh-TW">Random Numbers (and Modules)隨機數（和模塊）</span></p>
+<ul>
 <li>
-<h5>Keep the game going until the user types “exit”繼續遊戲，直到用戶鍵入“退出”</h5>
+<h5>Modules模組</h5>
 </li>
 <li>
-<h5>Keep track of how many guesses the user has taken, and when the game ends, print this out.跟踪用戶進行了多少猜測，當遊戲結束時，將其打印出來。</h5>
+<h5>Random numbers隨機數</h5>
 </li>
-</ul><br />HW2 << <a href='HW2.html'>Previous</a> <a href='Exercise 9 Guessing game one.html'>Next</a> >> Exercise 9 Guessing game one</div>
+<li>
+<h5>User input用戶輸入</h5>
+<h5></h5>
+</li>
+</ul>
+<p>This is your first exposure to using Python code that somebody else wrote. In Python, these formally-distributed code packages are called<span> </span><em>modules</em>. The thing we want from a module in this exercise is the ability to generate random numbers. This comes from the<span> </span><em>random</em><span> </span>module.</p>
+<p>To use a module, at the top of your file, type</p>
+<p><span lang="zh-TW">這是您第一次使用別人編寫的Python代碼。在Python中，這些正式分發的代碼包稱為模塊。在本練習中，我們希望從模塊獲得的是生成隨機數的能力。這來自隨機模塊。 要使用模塊，請在文件頂部鍵入</span></p>
+<pre><span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="kn">[import</span> <span class="nn">random]<br/><span style="color: #000000;">This means you are allowing your Python program to use a module called <code class="highlighter-rouge">random</code> in the <br/>rest of your code.<br/></span><span style="color: #000000;">这意味着您允许 Python 程序在代码的其余部分使用称为随机的模块。<br/><br/>To use it (and generate a random integer), now type:<br/>要使用它（並生成随機整数），請键入：<br/></span></span></code></span></pre>
+<pre><span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="n">[a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]<br/></span></code></span></pre>
+<pre><span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="nn"><span style="color: #000000;">Once you run this program, the variable a will have a random integer that the computer <br/>made for you, between 2 and 6 (including 2 and 6). The specific documentation for this <br/>method is here.<br/>運行此程序后，變量 a 将有一个随機整数，計算機為您制作的 2 和 6（包括 2 和 6）。此方法的特定文<br/>檔位於此處。<br/>There are many ways you can generate random numbers - integers, decimals, and much <br/>more. The Python documentation has much more detailed information about what is <br/>possiblefrom the random module.<br/>有許多方法可以生成随機數 - 整數、小數等。Python 文档包含有關随機模塊中可能實現哪些内容的詳细信<br/>息。<br/><br/></span><br/></span></code></span></pre><br />Exercise 9 Guessing game one << <a href='Exercise 9 Guessing game one.html'>Previous</a> <a href='solution解決方法.html'>Next</a> >> solution解決方法</div>
         
     <!-- footer -->
       <div class="container">
