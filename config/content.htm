@@ -149,96 +149,19 @@
 <pre><span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="kn">[import</span> <span class="nn">random]<br/><span style="color: #000000;">This means you are allowing your Python program to use a module called <code class="highlighter-rouge">random</code> in the <br/>rest of your code.<br/></span><span style="color: #000000;">这意味着您允许 Python 程序在代码的其余部分使用称为随机的模块。<br/><br/>To use it (and generate a random integer), now type:<br/>要使用它（並生成随機整数），請键入：<br/></span></span></code></span></pre>
 <pre><span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="n">[a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]<br/></span></code></span></pre>
 <pre><span style="color: #ff0000;"><code class="language-python" data-lang="python"><span class="nn"><span style="color: #000000;">Once you run this program, the variable a will have a random integer that the computer <br/>made for you, between 2 and 6 (including 2 and 6). The specific documentation for this <br/>method is here.<br/>運行此程序后，變量 a 将有一个随機整数，計算機為您制作的 2 和 6（包括 2 和 6）。此方法的特定文<br/>檔位於此處。<br/>There are many ways you can generate random numbers - integers, decimals, and much <br/>more. The Python documentation has much more detailed information about what is <br/>possiblefrom the random module.<br/>有許多方法可以生成随機數 - 整數、小數等。Python 文档包含有關随機模塊中可能實現哪些内容的詳细信<br/>息。<br/><br/></span><br/></span></code></span></pre><h3>solution解決方法</h3>
-<p><span>Great example of a solution including both extras!</span>解决方案的一个很好的例子， 包括两个额外！</p>
 <p></p>
-<p>Ex:</p>
-<pre>import random
-
-number = random.randint(1,9)
-guess = 0
-count = 0
-
-
-while guess != number and guess != "exit":
-    guess = input("What's your guess?")
-    
-    if guess == "exit":
-        break
-    
-    guess = int(guess)
-    count += 1
-    
-    if guess &lt; number:
-        print("Too low!")
-    elif guess &gt; number:
-        print("Too high!")
-    else:
-        print("You got it!")
-        print("And it only took you",count,"tries!")<br/><span><br/>And another另一個:<br/></span></pre>
-<pre>import random
-
-rd = random.randint(1,9)
-guess = 0
-c = 0
-while guess != rd and guess != "exit":
-    guess = input("Enter a guess between 1 to 9")
-
-    if guess == "exit":
-        break
-
-    guess = int(guess)
-    c += 1
-
-    if guess &lt; rd:
-        print("Too low")
-    elif guess &gt; rd:
-        print("Too high")
-    else:
-        print("Right!")
-        print("You took only", c, "tries!")
-input()</pre>
-<pre><span> </span></pre>
-<pre><br/>or或者<br/><br/></pre>
-<pre>import random
-
-# Awroken
-
-MINIMUM = 1
-MAXIMUM = 9
-NUMBER = random.randint(MINIMUM, MAXIMUM)
-GUESS = None
-ANOTHER = None
-TRY = 0
-RUNNING = True
-
-print "Alright..."
-
-while RUNNING:
-    GUESS = raw_input("What is your lucky number? ")
-    if int(GUESS) &lt; NUMBER:
-        print "Wrong, too low."
-    elif int(GUESS) &gt; NUMBER:
-        print "Wrong, too high."
-    elif GUESS.lower() == "exit":
-        print "Better luck next time."
-    elif int(GUESS) == NUMBER:
-        print "Yes, that's the one, %s." % str(NUMBER)
-        if TRY &lt; 2:
-            print "Impressive, only %s tries." % str(TRY)
-        elif TRY &gt; 2 and TRY &lt; 10:
-            print "Pretty good, %s tries." % str(TRY)
-        else:
-            print "Bad, %s tries." % str(TRY)
-        RUNNING = False
-    TRY += 1</pre>
+<pre>def list_ends(a_list):
+    return [a_list[0], a_list[len(a_list)-1]]</pre>
+<p><span></span></p>
 <h5 id="happy-coding">Happy coding!編碼愉快</h5>
 <pre><br/><br/><br/></pre>
 <pre><br/><br/></pre>
 <pre><span></span></pre><h2>Exercise 12 List Ends</h2>
 <p><span>Write a program that takes a list of numbers (for example, </span><code class="highlighter-rouge">a = [5, 10, 15, 20, 25]</code><span>) and makes a new list of only the first and last elements of the given list. For practice, write this code inside a function.</span></p>
 <p><span lang="zh-TW">編寫一個程序，該程序接受一個數字列表（例如，a = [5、10、15、20、25]），並僅給出給定列表的第一個和最後一個元素組成一個新列表。為了練習，請在函數內編寫此代碼。</span></p>
-<p><span lang="zh-TW"></span></p>
-<p><span lang="zh-TW">Concepts to practice</span><span lang="zh-TW">練習概念</span></p>
+<p><br/><br/></p>
+<h3>Concepts to practice練習概念</h3>
+<p><br/><span lang="zh-TW"></span></p>
 <ul>
 <li>
 <h5>Lists and properties of lists<span>列表和列表屬性</span></h5>
@@ -249,10 +172,45 @@ while RUNNING:
 <li>
 <h5>Functions功能</h5>
 </li>
-</ul>
-<h2>Exercise 13 Fibonacci</h2>
+</ul><h3>solution解決方法</h3><h2>Exercise 13 Fibonacci</h2>
 <h5><span>Write a program that asks the user how many Fibonnaci numbers to generate and then generates them. Take this opportunity to think about how you can use functions. Make sure to ask the user to enter the number of numbers in the sequence to generate.(</span><em>Hint: The Fibonnaci seqence is a sequence of numbers where the next number in the sequence is the sum of the previous two numbers in the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …</em><span>)</span></h5>
-<h5><span lang="zh-TW">編寫一個程序，詢問用戶要生成多少斐波那契數字，然後生成它們。藉此機會考慮如何使用功能。確保要求用戶輸入要生成的序列中的數字。（提示：Fibonnaci序列是一個數字序列，其中序列中的下一個數字是序列中前兩個數字的和。該序列看起來像這樣：1，1，2，3，5，8，13，…）</span></h5>
-<h5><span lang="zh-TW"></span></h5>
-<h5><span lang="zh-TW"></span></h5>
-</div></div></div>
+<h5><span lang="zh-TW">編寫一個程序，詢問用戶要生成多少斐波那契數字，然後生成它們。藉此機會考慮如何使用功能。確保要求用戶輸入要生成的序列中的數字。（提示：Fibonnaci序列是一個數字序列，其中序列中的下一個數字是序列中前兩個數字的和。該序列看起來像這樣：1，1，2，3，5，8，13，…）</span></h5><h3>Discussion討論區</h3>
+<p>Practice functions!練習功能！</p><h3>solution解決方法</h3>
+<p><span>There are so many ways that you can use functions to generate Fibonacci numbers. Here is one user-submitted solution</span>您可以通過多種方式使用函數來生成斐波那契數。 這是用戶提交的一種解決方案：</p>
+<p></p>
+<pre>def gen_fib():
+    count = int(input("How many fibonacci numbers would you like to generate? "))
+    i = 1
+    if count == 0:
+        fib = []
+    elif count == 1:
+        fib = [1]
+    elif count == 2:
+        fib = [1,1]
+    elif count &gt; 2:
+        fib = [1,1]
+        while i &lt; (count - 1):
+            fib.append(fib[i] + fib[i-1])
+            i += 1
+
+    return fib
+        <br/><br/><span>And another另一種解:<br/></span></pre>
+<pre>def fibonacci():
+    num = int(input("How many numbers that generates?:"))
+    i = 1
+    if num == 0:
+        fib = []
+    elif num == 1:
+        fib = [1]
+    elif num == 2:
+        fib = [1,1]
+    elif num &gt; 2:
+        fib = [1,1]
+        while i &lt; (num - 1):
+            fib.append(fib[i] + fib[i-1])
+            i += 1
+    return fib
+print(fibonacci())
+input()<br/><br/><span>This solution is using what is called the “iterative” method of computing Fibonacci <br/>numbers. This means you use some kind of loop to keep adding numbers together to <br/>get the next number.<br/>該解決方案使用了所謂的計算斐波納契數的“迭代”方法。 這意味著您使用某種循環來將數字加在一起以<br/>獲得下一個數字。<br/>An alternative way of computing Fibonacci numbers is to use <em>recursion</em><span>, or calling <br/>the same function over and over in a special way, to compute the Fibonacci numbers.<br/>We will talk about this in a future exercise.<br/>計算斐波那契數的另一種方法是使用遞歸，或以一種特殊方式一遍又一遍地調用相同的函數來計算斐波<br/>那契數。 我們將在以後的練習中討論這一點。</span></span></pre>
+<pre><span></span></pre>
+<h5><span lang="zh-TW"></span></h5></div></div></div>

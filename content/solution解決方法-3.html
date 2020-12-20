@@ -133,11 +133,45 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">solution解決方法-1 << <a href='solution解決方法-1.html'>Previous</a> <a href='Concepts to practice練習概念.html'>Next</a> >> Concepts to practice練習概念<br /><h1>Exercise 12 List Ends</h1>
-<p><span>Write a program that takes a list of numbers (for example, </span><code class="highlighter-rouge">a = [5, 10, 15, 20, 25]</code><span>) and makes a new list of only the first and last elements of the given list. For practice, write this code inside a function.</span></p>
-<p><span lang="zh-TW">編寫一個程序，該程序接受一個數字列表（例如，a = [5、10、15、20、25]），並僅給出給定列表的第一個和最後一個元素組成一個新列表。為了練習，請在函數內編寫此代碼。</span></p>
-<p><br/><br/></p>
-<br />solution解決方法-1 << <a href='solution解決方法-1.html'>Previous</a> <a href='Concepts to practice練習概念.html'>Next</a> >> Concepts to practice練習概念</div>
+    <div id="tipue_search_content">Discussion討論區 << <a href='Discussion討論區.html'>Previous</a> <br /><h1>solution解決方法-3</h1>
+<p><span>There are so many ways that you can use functions to generate Fibonacci numbers. Here is one user-submitted solution</span>您可以通過多種方式使用函數來生成斐波那契數。 這是用戶提交的一種解決方案：</p>
+<p></p>
+<pre>def gen_fib():
+    count = int(input("How many fibonacci numbers would you like to generate? "))
+    i = 1
+    if count == 0:
+        fib = []
+    elif count == 1:
+        fib = [1]
+    elif count == 2:
+        fib = [1,1]
+    elif count &gt; 2:
+        fib = [1,1]
+        while i &lt; (count - 1):
+            fib.append(fib[i] + fib[i-1])
+            i += 1
+
+    return fib
+        <br/><br/><span>And another另一種解:<br/></span></pre>
+<pre>def fibonacci():
+    num = int(input("How many numbers that generates?:"))
+    i = 1
+    if num == 0:
+        fib = []
+    elif num == 1:
+        fib = [1]
+    elif num == 2:
+        fib = [1,1]
+    elif num &gt; 2:
+        fib = [1,1]
+        while i &lt; (num - 1):
+            fib.append(fib[i] + fib[i-1])
+            i += 1
+    return fib
+print(fibonacci())
+input()<br/><br/><span>This solution is using what is called the “iterative” method of computing Fibonacci <br/>numbers. This means you use some kind of loop to keep adding numbers together to <br/>get the next number.<br/>該解決方案使用了所謂的計算斐波納契數的“迭代”方法。 這意味著您使用某種循環來將數字加在一起以<br/>獲得下一個數字。<br/>An alternative way of computing Fibonacci numbers is to use <em>recursion</em><span>, or calling <br/>the same function over and over in a special way, to compute the Fibonacci numbers.<br/>We will talk about this in a future exercise.<br/>計算斐波那契數的另一種方法是使用遞歸，或以一種特殊方式一遍又一遍地調用相同的函數來計算斐波<br/>那契數。 我們將在以後的練習中討論這一點。</span></span></pre>
+<pre><span></span></pre>
+<h5><span lang="zh-TW"></span></h5></div></div></div><br />Discussion討論區 << <a href='Discussion討論區.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
