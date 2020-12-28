@@ -114,7 +114,128 @@
 <h1>HW2</h1>
 <p><a href="https://www.kaggle.com/mdecourse/cp2020-hw2">https://www.kaggle.com/mdecourse/cp2020-hw2</a></p>
 <p>先從網站上抓取班級名單</p>
-<p>import urllib.request<br/>target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"<br/>cp1b = []<br/>for line in urllib.request.urlopen(target_url):<br/>  cp1b.append(line.decode('utf-8'))<br/>print(cp1b)</p><h1>HW3</h1><ul>
+<p>import urllib.request<br/>target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"<br/>cp1b = []<br/>for line in urllib.request.urlopen(target_url):<br/>  cp1b.append(line.decode('utf-8'))<br/>print(cp1b)</p>
+<p></p>
+<p><strong><span>from</span></strong><span> </span><span>random</span><span> </span><strong><span>import</span></strong><span> </span>shuffle</p>
+<p><span>將下列每組數字從新排列</span><br/>list =<span> </span><strong>[</strong><span>40523138, 40523148, 40723217, 40728238, 40823148, 40823152, 40923201, 40923202, 40923203, 40923204, 40923205, 40923206, 40923207, 40923208, 40923209, 40923210, 40923211, 40923212, 40923213, 40923214, 40923216, 40923217, 40923218, 40923219, 40923220, 40923221, 40923223, 40923224, 40923225, 40923226, 40923227, 40923228, 40923229, 40923230, 40923231, 40923232, 40923233, 40923234, 40923235, 40923236, 40923237, 40923238, 40923239, 40923240, 40923241, 40923242, 40923243, 40923244, 40923245, 40923246, 40923247, 40923248, 40923249, 40923250, 40923251, 40923252, 40923253</span><strong>]</strong></p>
+<p><strong></strong></p>
+<p>解題步驟:</p>
+<p>1. 導入物件</p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_496870">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py keyword">import</code> <code class="py plain">urllib.request</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>2.設url(要打開的網址)</p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_426407">
+<table border="0" cellpadding="0" cellspacing="0" height="19" width="506">
+<tbody>
+<tr>
+<td class="gutter" style="width: 8px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 492px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py plain">target_url </code><code class="py keyword">=</code> <code class="py string">"https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>3.設數列</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_135002">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">cp1b = []</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>4.設line為打開url的迴圈，並且使數列cp1b增加編碼後的line，最後刪除字尾符號</p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_389847">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py keyword">for</code> <code class="py plain">line </code><code class="py keyword">in</code> <code class="py plain">urllib.request.urlopen(target_url):</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_426722">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py plain">cp1b.append(</code><code class="py functions">int</code><code class="py plain">(line.decode(</code><code class="py string">'utf-8'</code><code class="py plain">).rstrip()))</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>5.印出1b的數列</p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_565366">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py functions">print</code><code class="py plain">(cp1b)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong></strong></p><h1>HW3</h1>
+<p><a href="https://www.kaggle.com/a40923226/cp2020-hw3/edit?rvi=1">https://www.kaggle.com/a40923226/cp2020-hw3/edit?rvi=1</a></p>
+<ul>
 <li>
 <h5>Keep the game going until the user types “exit”繼續遊戲，直到用戶鍵入“退出”</h5>
 </li>
